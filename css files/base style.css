@@ -1,0 +1,111 @@
+/* BASE STYLE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    border: none;
+    color: #000;
+}
+
+button {
+    border: none;
+}
+
+.--add-for-mobile {
+    display: none;
+}
+
+/* Переменные */
+:root {
+    --background-color-inside-header__wrapper: #283645;
+    --background-color-inside-promo-download: #1D2631;
+    --background-color-inside-header: rgb(0,0,0,30%);
+
+    --w-font-color: #FFFFFF;
+    --b-font-color: #283645;
+    --font-family: Open Sans;
+}
+
+body {
+    color: var(--b-font-color);
+
+    font-family: var(--font-family);
+    font-size: 14px;
+}
+
+.container {
+    width: 100%;
+    
+    border-left: 1px solid #f2f2f2e0;
+    border-right: 1px solid #f2f2f2e0;
+}
+
+/* Картинки для лого */
+.header__logo-mobile-img, .header__logo-tablet-img,
+.header__logo-desktop-img {
+    display: none;
+}
+
+.header {
+    color: var(--w-font-color);
+}
+
+.promo {
+    color: var(--w-font-color);
+}
+
+/* Картинки для секции особенностей */
+.features__mobile-img, .features__tablet-img {
+    display: none;
+}
+
+/* Картинки для подсекции исследований */
+.research__tablet-img, .research__desktop-img {
+    display: none;
+}
+
+/* Картинка кавычек для секции отзывов */
+.reviews__img {
+    display: none;
+}
+
+/* Кнопки секции вызовов */
+.reviews__next, .reviews__previous,
+.reviews__slider {
+    display: none;
+} 
+
+.tariffs {
+    position: relative;
+}
+.tariffs__bg {
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #F2F2F2;
+}
+
+/* Кнопки секции тарифов */
+.tariffs__slider {
+    display: none;
+}
+
+/* Лого подвала */
+.footer__logo-img, 
+.footer__desktop-logo-img {
+    display: none;
+} 
+
+
+
