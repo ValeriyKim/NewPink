@@ -1,0 +1,534 @@
+@viewport { width: device-width;}
+
+@media (min-width: 320px) and (max-width: 767px) { 
+
+.--delete-for-mobile {
+    display: none;
+}
+.--add-for-mobile {
+    display: inline;
+
+}
+
+/* Отступы и выравнивание для мобилок */
+.header {}
+
+.header__wrapper {
+    padding: 23px 10%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--background-color-inside-header__wrapper);
+}
+
+/* Лого для мобилок */
+.header__logo-mobile-img {
+    display: block;
+}
+
+/* Бургер */
+.header-more {
+    position: relative;
+    display: block;
+    
+    width: 23px;
+    height: 23px;
+    
+    background-color: inherit;
+    cursor: pointer;
+
+    transition: 1s ease-in-out;
+}
+.header-more__element {
+    position: absolute;
+    display: block;
+    
+    width: 100%;
+    height: 3px;
+    left: 0;
+
+    background-color: white;
+    opacity: 1;
+
+    transition: 0.15s ease-in-out;
+}
+/* Положение спанов до нажатия */
+.header-more__element:nth-child(1) {
+    top: 0px;
+}
+.header-more__element:nth-child(2) {
+    top: 10px;
+}
+.header-more__element:nth-child(3) {
+    bottom: 0px;
+}
+/* Положение спанов после нажатия */
+.header-more:active .header-more__element:nth-child(1) {
+    top: 9px;
+
+    transform: rotate(135deg);
+}
+.header-more:active .header-more__element:nth-child(2) {
+    left: -60px;
+
+    opacity: 0;
+}
+.header-more:active .header-more__element:nth-child(3) {
+    top: 9px;
+
+    transform: rotate(-135deg);
+}
+
+/* Навигация */
+.header-navigation {
+    background-color: var(--background-color-inside-header__wrapper);
+}
+
+.header-navigation-list {
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.header-navigation-list__item {
+    padding: 25px 0;
+
+    border-top: 1px solid black;
+}
+.header-navigation-list__item:last-child {
+    border-bottom: 1px solid black;
+}
+
+.header-navigation-list__item > a{
+    color: inherit;
+}
+
+/* Промо секция */
+.promo-title-background {
+    height: 396px;
+
+    background-image:
+    url(../images/mobile_promo_hand.png),
+    url(../images/mobile_promo_background.jpg);
+
+    background-position: calc(50% - 30px) bottom, 50% 100%;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.promo__title {
+    text-align: center;
+
+    font-size: 24px;
+    font-weight: 300;
+
+    padding-top: 20px;
+}
+
+.br--delete-for-m {
+    display: none;
+}
+
+/* Секция скачивания */
+.promo-download {
+    background-color: var(--background-color-inside-promo-download);
+
+    text-align: center;
+
+    padding-top: 38px;
+}
+
+.promo-download__link {
+    padding: 10px 40px;
+
+    border: 3px solid white;
+    border-radius: 40px;
+
+    color: inherit;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Список платформ */
+.promo-download-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 42px 0 28px;
+}
+.promo-download-list__item:nth-child(2) {
+    margin: 0 35px;
+}
+
+.promo-download__text {
+    padding-bottom: 38px;
+}
+
+/* Секция особенностей */
+.features {
+    position: relative;
+}
+.features__bg {
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #F2F2F2;
+
+    clip-path: polygon(0 23%, 100% 19%, 100% 100%, 0% 100%);
+}
+
+.features__title {
+    font-size: 24px;
+    font-weight: 300;
+
+    text-align: center;
+
+    margin: 46px 0 70px;
+}
+
+.features__undertitle {
+    display: block;
+    margin-top: 30px;
+}
+
+.features__wrapper {
+    margin-top: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.features-list__item-mood,
+.features-list__item-world {
+    margin-bottom: 35px;
+    
+}
+
+.features-list-item__title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.features-list-item__text {
+    min-width: 15ch;
+    max-width: 33ch;
+
+    margin-top: 14px;
+
+    line-height: 24px;
+    
+}
+
+.features__mobile-img {
+    display: block;
+
+    width: 157px;
+    height: 278px;
+
+    object-fit: none;
+    object-position: top;
+
+    margin-top: 40px;
+}
+
+/* Отключение подсекции исследований */
+
+.research {
+    display: none;;
+}
+
+/* Секция отзывов */
+.reviews {
+    padding: 50px 0 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.review__quote {
+    min-width: 15ch;
+    max-width: 35ch;
+
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.review__author {
+    font-size: 18px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+    font-style: normal;
+}
+
+.review__details {
+    display: none;
+}
+
+.reviews__slider {
+    display: flex;
+}
+
+.reviews__slider-btn1, .reviews__slider-btn2, 
+.reviews__slider-btn3 {
+    content: "";
+
+    padding: 6px 6px;
+
+    background-color: rgba(40, 54, 69, 30%);;
+
+    clip-path: circle(40%);
+}
+.reviews__slider-btn2 {
+    margin: 0 19px;
+}
+.reviews__slider-btn1--active:hover, 
+.reviews__slider-btn2--active:hover, 
+.reviews__slider-btn3--active:hover {
+    border: 5px solid rgb(40, 54, 69);
+    border-radius: 40%;
+
+    background-color: transparent;
+}
+
+/* Секция тарифов */
+
+.tariffs {
+    overflow: hidden;
+}
+
+.tariffs__bg {
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.tariffs__table {
+    padding: 83px 0 45px;
+    margin: 0 auto;
+
+    border-spacing: 0;
+
+    object-position: 50% ;
+}
+
+.tariffs-table__column-title {
+    background-color: #283645;
+    color: #FFF;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    min-width: 276px;
+    min-height: 94px;
+
+    padding-top: 19px;
+    padding-bottom: 35px;
+}
+.tariffs-table__column-title:nth-child(3) {
+    border-inline: 1px solid #F2F2F2;
+
+    position: relative;
+}
+
+.tariffs-table__column-price {
+    font-size: 18px !important;
+    font-weight: 300 !important;
+}
+
+/* Летночка Хит */
+.tariffs-table__column-title--ribbon {
+    position: absolute;
+    top: 0;
+
+    width: 74px;
+    height: 74px;
+
+    background-color: #D22856;    
+
+    clip-path: polygon(60% 0, 100% 0, 0 100%, 0 60%);
+}
+
+.ribbon__text {
+    transform: rotate(-48deg);
+
+    margin-top: 16px;
+    margin-right: 10px;
+
+    font-size: 14px;
+}
+
+.tariffs-table-row__cell {
+    border: 1px solid #E5E5E5;
+
+    background-color: #FFF;
+
+    width: 152px;
+    height: 45px;
+
+    padding-inline: 19px;
+}
+
+.tariffs-table-row__cell-img {
+    float: right;
+}
+
+.tariffs-table__row-title {
+    font-size: 14px;
+
+    padding-left: 15px;
+}
+
+.tariffs__slider {
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 49px;
+}
+
+.tariffs__slider-btn1, .tariffs__slider-btn2, 
+.tariffs__slider-btn3 {
+    content: "";
+
+    padding: 6px 6px;
+
+    background-color: rgba(40, 54, 69, 30%);;
+
+    clip-path: circle(40%);
+}
+.tariffs__slider-btn2 {
+    margin: 0 19px;
+}
+.tariffs__slider-btn1--active:hover, 
+.tariffs__slider-btn2--active:hover, 
+.tariffs__slider-btn3--active:hover {
+    border: 5px solid rgb(40, 54, 69);
+    border-radius: 40%;
+
+    background-color: transparent;
+}
+
+/* Секция контактной информации */
+.contacts {
+    padding: 47px 0 0;
+}
+
+.contacts-info {
+    text-align: center;
+}
+
+.contacts-info__title {
+    font-size: 24px;
+    font-weight: 300;
+
+    line-height: 120%;
+
+    margin-bottom: 45px;
+}
+
+.contacts-info-list__item {
+    margin-bottom: 41px;
+}
+.contacts-info-list__item:not(:last-child) {
+    margin-bottom: 33px;
+}
+
+.contacts-info__text {
+    font-size: 18px;
+    font-weight: 700;
+
+    margin-bottom: 13px;
+}
+
+.contacts-info-link__tel,
+.contacts-info-link__mail,
+.contacts-info__address {
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+
+    color: #D22856;
+}
+
+/* Карта */
+.contacts-map {
+    position: relative;
+}
+
+.contacts-map__bg {
+    position: absolute;
+
+    background-color: white;
+    
+    width: 100%;
+    height: 50px;
+
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.contacts-map__item {
+    width: 100%;
+    height: 250px;
+
+    border: none;
+}
+
+/* Подвал */
+.footer {
+    text-align: center;
+}
+
+.footer__logo {
+    margin: 40px 0 41px;
+}
+
+.footer__logo-img {
+    display: block;
+} 
+
+.footer-socail-list {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 41px;
+}
+
+.footer-socail-list__item:nth-child(2) {
+    margin-inline: 14px;
+}
+
+.footer-credit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 51px;
+}
+
+.footer-credit__text {
+    margin-right: 15px;
+}
+
+}
